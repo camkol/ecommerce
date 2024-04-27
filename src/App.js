@@ -420,7 +420,7 @@ function TermsAndConditionsField() {
         name="terms-and-conditions"
         className="inline"
       />
-      I accept the
+      I accept the{" "}
       <a href="https://www.freecodecamp.org/news/terms-of-service/">
         terms and conditions
       </a>
