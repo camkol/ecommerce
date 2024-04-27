@@ -369,6 +369,18 @@ function CityStateField(props) {
 function ZipCountryField(props) {
   const { countryOptions, zipcodeLabel, countryLabel } = props;
 
+  function get_api() {
+    fetch(`http://api.zippopotam.us/us/${zip}`)
+      .then((response) =>
+        response.json().then((data) => {
+          console.log(data);
+        })
+      )
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   return (
     <div className="slots" id="zipCountry">
       <label htmlFor="zipcode" id="zipcodeCase">
