@@ -1,5 +1,5 @@
 export default function NameField(props) {
-  const { titleOptions, firstNamePlaceholder, lastNamePlaceholder } = props;
+  const { titleOptions } = props;
 
   return (
     <label htmlFor="fullName">
@@ -17,14 +17,14 @@ export default function NameField(props) {
           id="first-name"
           name="first-name"
           type="text"
-          placeholder={firstNamePlaceholder}
+          placeholder="First"
           required
         />
         <input
           id="last-name"
           name="last-name"
           type="text"
-          placeholder={lastNamePlaceholder}
+          placeholder="Last"
           required
         />
       </div>

@@ -6,7 +6,8 @@ body {
 
 main {
   width: 100%;
-  height: inherit;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 0;
   padding-top: 50px;
   background: linear-gradient(to bottom right, #121fcf 0%, #cf1512 100%);
@@ -49,7 +50,7 @@ label {
 input {
   margin: 10px 0 0 0;
   width: 100%;
-  min-height: 2em;
+  height: 2em;
   background-color: #e7e7eb;
   border: none;
   border-radius: 0.2rem;
@@ -68,7 +69,7 @@ textarea {
 select {
   margin: 10px 0 0 0;
   width: 100%;
-  min-height: 2em;
+  height: 2em;
 }
 
 .inline {
@@ -111,6 +112,19 @@ a {
 #registration form {
   width: 100%;
 }
+#registration form fieldset #zipcode {
+  justify-content: start;
+  align-items: baseline;
+}
+#registration form fieldset #zipcode #zip {
+  width: 6rem;
+}
+#registration form fieldset #zipcode #search {
+  min-height: 2.3em;
+  border-radius: 0.2rem;
+  background-color: #3b3b4f;
+  color: #ffffff;
+}
 #registration form fieldset .slots {
   display: flex;
   justify-content: space-between;
@@ -136,9 +150,50 @@ a {
 #registration form fieldset .slots #stateCase {
   width: 30%;
 }
-#registration form fieldset .slots #zipcodeCase {
-  width: 15%;
-}
 #registration form fieldset .slots #countryCase {
   width: 80%;
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    padding: 0;
+    height: auto;
+  }
+  #registration {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    padding: 0;
+  }
+  #registration h1 {
+    margin: 0;
+    padding: 1em;
+  }
+  #registration p {
+    margin: 0;
+  }
+  #registration form {
+    width: auto;
+    padding: 0.5rem;
+  }
+  #registration form fieldset {
+    width: 100%;
+  }
+  #registration form fieldset label {
+    width: 100%;
+  }
+  #registration form fieldset .slots {
+    width: 100%;
+  }
+  #registration form fieldset .slots #title {
+    width: 16%;
+  }
+  #registration form fieldset .slots #first-name,
+  #registration form fieldset .slots #last-name {
+    width: 38%;
+  }
+  #registration form fieldset .slots #email #phone {
+    width: 90%;
+  }
 }/*# sourceMappingURL=app.css.map */

@@ -1,14 +1,14 @@
 export default function CityStateField(props) {
-  const { stateOptions, cityLabel, stateLabel } = props;
+  const { stateOptions } = props;
 
   return (
     <div className="slots" id="cityState">
       <label htmlFor="city" id="cityCase">
-        {cityLabel}:
+        City:
         <input id="city" name="city" type="text" required />
       </label>
       <label htmlFor="state" id="stateCase">
-        {stateLabel}:
+        State:
         <select id="state" name="state" required>
           <option value="" disabled>
             -

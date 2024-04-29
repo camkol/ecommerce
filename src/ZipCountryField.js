@@ -1,5 +1,5 @@
-export default function ZipCountryField(props) {
-  const { countryOptions, zipcodeLabel, countryLabel } = props;
+export default function ZipCountryField() {
+  //const { countryOptions, zipcodeLabel, countryLabel } = props;
 
   // function get_api() {
   //   fetch(`http://api.zippopotam.us/us/${zip}`)
@@ -14,13 +14,19 @@ export default function ZipCountryField(props) {
   // }
 
   return (
-    <div className="slots" id="zipCountry">
+    <div id="zipCountry">
       <label htmlFor="zipcode" id="zipcodeCase">
-        {zipcodeLabel}:
-        <input id="zipcode" name="zipcode" type="text" required />
-      </label>
-      <label htmlFor="country" id="countryCase">
-        {countryLabel}:
+        Zip Code:{" "}
+        <div className="slots" id="zipcode">
+          {" "}
+          <input id="zip" name="zipcode" type="text" required />
+          <button id="search" type="button">
+            Search
+          </button>
+        </div>
+      </label>{" "}
+      {/* <label htmlFor="country" id="countryCase">
+        Country:
         <select id="country" name="country" required>
           <option value="" disabled>
             -
@@ -31,7 +37,7 @@ export default function ZipCountryField(props) {
             </option>
           ))}
         </select>
-      </label>
+      </label> */}
     </div>
   );
 }

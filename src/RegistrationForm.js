@@ -13,22 +13,10 @@ export default function RegistrationForm() {
   return (
     <form method="post" action="https://register-demo.freecodecamp.org">
       <fieldset>
-        <NameField
-          titleOptions={titleOptions}
-          firstNamePlaceholder="First"
-          lastNamePlaceholder="Last"
-        />
+        <NameField titleOptions={titleOptions} />
         <StreetAddressField />
-        <CityStateField
-          stateOptions={stateOptions}
-          cityLabel="City"
-          stateLabel="State"
-        />
-        <ZipCountryField
-          countryOptions={countryOptions}
-          zipcodeLabel="Zipcode"
-          countryLabel="Country"
-        />
+        <ZipCountryField countryOptions={countryOptions} />{" "}
+        <CityStateField stateOptions={stateOptions} />
         <EmailPhone />
         <TermsAndConditionsField />
       </fieldset>

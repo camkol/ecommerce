@@ -15,7 +15,7 @@ body {
 }
 main {
   width: 100%;
-  height: inherit;
+  height: fit-content;
   margin: 0;
   padding-top: 50px;
   background: $background-color_1;
@@ -52,7 +52,7 @@ label {
 input {
   margin: 10px 0 0 0;
   width: 100%;
-  min-height: 2em;
+  height: 2em;
   background-color: $background-color_2;
   border: none;
   border-radius: 0.2rem;
@@ -69,7 +69,7 @@ textarea {
 select {
   margin: 10px 0 0 0;
   width: 100%;
-  min-height: 2em;
+  height: 2em;
 }
 
 .inline {
@@ -108,6 +108,19 @@ a {
   form {
     width: 100%;
     fieldset {
+      #zipcode {
+        justify-content: start;
+        align-items: baseline;
+        #zip {
+          width: 6rem;
+        }
+        #search {
+          min-height: 2.3em;
+          border-radius: 0.2rem;
+          background-color: $background-color_3;
+          color: $color_2;
+        }
+      }
       .slots {
         display: flex;
         justify-content: space-between;
@@ -133,11 +146,65 @@ a {
         #stateCase {
           width: 30%;
         }
-        #zipcodeCase {
-          width: 15%;
-        }
+
         #countryCase {
           width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    padding: 0;
+    height: auto;
+  }
+  #registration {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    padding: 0;
+    h1 {
+      margin: 0;
+      padding: 1em;
+    }
+    p {
+      margin: 0;
+    }
+    form {
+      width: auto;
+      padding: 0.5rem;
+      fieldset {
+        width: 100%;
+        label {
+          width: 100%;
+        }
+        .slots {
+          width: 100%;
+          #title {
+            width: 16%;
+          }
+          #first-name,
+          #last-name {
+            width: 38%;
+          }
+          #street-number {
+            //width: 100%;
+          }
+          #street {
+            //width: 100%;
+          }
+          #email #phone {
+            width: 90%;
+          }
+          #stateCase {
+            //width: 100%;
+          }
+          #countryCase {
+            //width: 100%;
+          }
         }
       }
     }
