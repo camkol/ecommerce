@@ -7,7 +7,7 @@ import EmailPhone from "./EmailPhone";
 import TermsAndConditionsField from "./TermsAndConditionsField";
 import titleOptions from "./titleOptions";
 import stateOptions from "./stateOptions";
-import countryOptions from "./countryOptions";
+//import countryOptions from "./countryOptions";
 
 export default function RegistrationForm() {
   return (
@@ -15,7 +15,8 @@ export default function RegistrationForm() {
       <fieldset>
         <NameField titleOptions={titleOptions} />
         <StreetAddressField />
-        <ZipCountryField countryOptions={countryOptions} />{" "}
+        <ZipCountryField />{" "}
+        {/* <ZipCountryField countryOptions={countryOptions} />{" "} */}
         <CityStateField stateOptions={stateOptions} />
         <EmailPhone />
         <TermsAndConditionsField />
