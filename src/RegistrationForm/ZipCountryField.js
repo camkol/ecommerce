@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 export default function ZipCountryField() {
   //const { countryOptions, zipcodeLabel, countryLabel } = props;
 
@@ -12,6 +14,24 @@ export default function ZipCountryField() {
   //       console.log(error);
   //     });
   // }
+
+  const zip = "23518";
+
+  useEffect(function () {
+    async function get_api() {
+      try {
+        const response = await fetch(`http://api.zippopotam.us/us/${zip}`);
+
+        if (!response.ok) throw new Error("Something is wrong with Zipcode");
+
+        const data = await response.json();
+        console.log(data);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    get_api();
+  }, []);
 
   return (
     <div id="zipCountry">
